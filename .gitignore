@@ -1,0 +1,10 @@
+db/
+node_modules
+\.idea/
+server/
+client/
+\.config/
+\.npm/
+\.pm2/
+\.vue-templates/
+\.ash_history
