@@ -1,11 +1,11 @@
 version: "3"
 services:
   frotend:
-    build: ./client/
+    build: ./client
     container_name: frotend
-    command: yarn dev
+    command: bash -c "yarn && yarn dev"
     volumes:
-      - ./client/:/usr/app
+      - ./client:/usr/app
     ports:
       - 3202:3000
     environment:
