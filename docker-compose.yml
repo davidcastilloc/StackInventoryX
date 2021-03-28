@@ -1,9 +1,9 @@
 version: "3"
 services:
-  frotend:
+  frontend:
     build: ./client
     container_name: frotend
-    command: bash -c "yarn && yarn dev"
+    command: yarn dev
     volumes:
       - ./client:/usr/app
     ports:
@@ -18,7 +18,7 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
     depends_on:
-      - frotend
+      - frontend
   strapi:
     container_name: strapi
     build: ./server/app
