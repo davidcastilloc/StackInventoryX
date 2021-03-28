@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "name": "inventory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "actual": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "min": {
+      "type": "decimal",
+      "default": 1
+    },
+    "max": {
+      "default": 1000,
+      "type": "decimal"
+    },
+    "product": {
+      "via": "inventory",
+      "model": "products"
+    },
+    "warehouse": {
+      "model": "warehouse"
+    }
+  }
+}

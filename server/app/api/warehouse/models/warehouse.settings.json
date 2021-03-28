@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouses",
+  "info": {
+    "name": "warehouse"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}
