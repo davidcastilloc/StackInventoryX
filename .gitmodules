@@ -1,3 +1,3 @@
 [submodule "client"]
 	path = client
-	url = git@github.com:davidcastilloc/InventoryX2.git
+	url = https://github.com/davidcastilloc/InventoryX2
