@@ -3,11 +3,11 @@ services:
   frotend:
     build: ./client/
     container_name: frotend
-    command: yarn run docker
+    command: yarn dev
     volumes:
       - ./client/:/usr/app
     ports:
-      - 3002:3000
+      - 3202:3000
     environment:
       HOST: "0.0.0.0"
   nginx:
