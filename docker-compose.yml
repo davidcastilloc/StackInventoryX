@@ -21,7 +21,7 @@ services:
       - frotend
   strapi:
     container_name: strapi
-    image: strapi/strapi
+    build: ./server/app
     environment:
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
