@@ -2,7 +2,7 @@ version: "3"
 services:
   frontend:
     build: ./client
-    container_name: frotend
+    container_name: frontend
     command: yarn dev
     volumes:
       - ./client:/usr/app
