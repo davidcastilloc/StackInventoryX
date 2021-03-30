@@ -60,8 +60,8 @@
       "required": true
     },
     "inventory": {
-      "model": "inventory",
-      "via": "product"
+      "via": "product",
+      "model": "inventory"
     }
   }
 }

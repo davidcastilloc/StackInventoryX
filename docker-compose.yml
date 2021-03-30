@@ -1,9 +1,9 @@
 version: "3"
 services:
   frontend:
-    build: ./client
     container_name: frontend
-    command: yarn dev
+    build: ./client
+    command: sh -c "yarn install && yarn run dev"
     volumes:
       - ./client:/usr/app
     ports:
@@ -22,6 +22,7 @@ services:
   strapi:
     container_name: strapi
     build: ./server/app
+    command: yarn develop
     environment:
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
