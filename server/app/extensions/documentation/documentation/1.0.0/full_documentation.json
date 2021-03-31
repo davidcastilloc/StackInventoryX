@@ -14,11 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-<<<<<<< HEAD
     "x-generation-date": "03/29/2021 8:02:06 PM"
-=======
-    "x-generation-date": "03/29/2021 8:06:23 PM"
->>>>>>> 440c992330821c4ff7996b0afab5ad732c9a7db9
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -99,9 +95,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "_limit",
@@ -287,9 +281,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -354,9 +346,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": []
       }
     },
@@ -407,9 +397,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "id",
@@ -469,9 +457,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -543,9 +529,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "id",
@@ -610,9 +594,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Inventory"
-        ],
+        "tags": ["Inventory"],
         "parameters": [
           {
             "name": "_limit",
@@ -798,9 +780,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Inventory"
-        ],
+        "tags": ["Inventory"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -865,9 +845,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Inventory"
-        ],
+        "tags": ["Inventory"],
         "parameters": []
       }
     },
@@ -918,9 +896,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Inventory"
-        ],
+        "tags": ["Inventory"],
         "parameters": [
           {
             "name": "id",
@@ -980,9 +956,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Inventory"
-        ],
+        "tags": ["Inventory"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1054,9 +1028,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Inventory"
-        ],
+        "tags": ["Inventory"],
         "parameters": [
           {
             "name": "id",
@@ -1121,9 +1093,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Products"
-        ],
+        "tags": ["Products"],
         "parameters": [
           {
             "name": "_limit",
@@ -1309,9 +1279,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Products"
-        ],
+        "tags": ["Products"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1376,9 +1344,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Products"
-        ],
+        "tags": ["Products"],
         "parameters": []
       }
     },
@@ -1429,9 +1395,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Products"
-        ],
+        "tags": ["Products"],
         "parameters": [
           {
             "name": "id",
@@ -1491,9 +1455,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Products"
-        ],
+        "tags": ["Products"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1565,9 +1527,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Products"
-        ],
+        "tags": ["Products"],
         "parameters": [
           {
             "name": "id",
@@ -1632,9 +1592,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "parameters": [
           {
             "name": "_limit",
@@ -1820,9 +1778,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -1887,9 +1843,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "parameters": []
       }
     },
@@ -1940,9 +1894,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "parameters": [
           {
             "name": "id",
@@ -2002,9 +1954,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2076,9 +2026,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "parameters": [
           {
             "name": "id",
@@ -2143,9 +2091,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Warehouse"
-        ],
+        "tags": ["Warehouse"],
         "parameters": [
           {
             "name": "_limit",
@@ -2331,9 +2277,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Warehouse"
-        ],
+        "tags": ["Warehouse"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2398,9 +2342,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Warehouse"
-        ],
+        "tags": ["Warehouse"],
         "parameters": []
       }
     },
@@ -2451,9 +2393,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Warehouse"
-        ],
+        "tags": ["Warehouse"],
         "parameters": [
           {
             "name": "id",
@@ -2513,9 +2453,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Warehouse"
-        ],
+        "tags": ["Warehouse"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2587,9 +2525,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Warehouse"
-        ],
+        "tags": ["Warehouse"],
         "parameters": [
           {
             "name": "id",
@@ -2655,9 +2591,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2726,9 +2660,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2797,9 +2729,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "parameters": []
       }
     },
@@ -2854,9 +2784,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -2925,9 +2853,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": []
       }
     },
@@ -2982,9 +2908,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": []
       }
     },
@@ -3039,9 +2963,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -3105,9 +3027,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -3173,9 +3093,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -3237,9 +3155,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "id",
@@ -3304,9 +3220,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "_limit",
@@ -3492,9 +3406,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -3555,9 +3467,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "role",
@@ -3632,9 +3542,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "role",
@@ -3699,9 +3607,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -3903,9 +3809,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": []
       }
     },
@@ -3960,9 +3864,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4027,9 +3929,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4094,9 +3994,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "provider",
@@ -4162,9 +4060,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4233,9 +4129,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4304,9 +4198,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": []
       }
     },
@@ -4361,9 +4253,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -4431,9 +4321,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "_limit",
@@ -4621,9 +4509,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": []
       }
     },
@@ -4674,9 +4560,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -4736,9 +4620,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -4813,9 +4695,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - User"
-        ],
+        "tags": ["UsersPermissions - User"],
         "parameters": [
           {
             "name": "id",
@@ -4834,9 +4714,7 @@
   "components": {
     "schemas": {
       "Category": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -4914,11 +4792,7 @@
           "products": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "title",
-                "configuration"
-              ],
+              "required": ["id", "title", "configuration"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -5001,10 +4875,7 @@
         }
       },
       "Inventory": {
-        "required": [
-          "id",
-          "actual"
-        ],
+        "required": ["id", "actual"],
         "properties": {
           "id": {
             "type": "string"
@@ -5022,11 +4893,7 @@
             "default": 1000
           },
           "product": {
-            "required": [
-              "id",
-              "title",
-              "configuration"
-            ],
+            "required": ["id", "title", "configuration"],
             "properties": {
               "id": {
                 "type": "string"
@@ -5079,9 +4946,7 @@
             }
           },
           "warehouse": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -5110,9 +4975,7 @@
         }
       },
       "NewInventory": {
-        "required": [
-          "actual"
-        ],
+        "required": ["actual"],
         "properties": {
           "actual": {
             "type": "number",
@@ -5145,11 +5008,7 @@
         }
       },
       "Products": {
-        "required": [
-          "id",
-          "title",
-          "configuration"
-        ],
+        "required": ["id", "title", "configuration"],
         "properties": {
           "id": {
             "type": "string"
@@ -5304,9 +5163,7 @@
             }
           },
           "category": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -5337,9 +5194,7 @@
           "tags": {
             "type": "array",
             "items": {
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -5372,10 +5227,7 @@
             "type": "object"
           },
           "inventory": {
-            "required": [
-              "id",
-              "actual"
-            ],
+            "required": ["id", "actual"],
             "properties": {
               "id": {
                 "type": "string"
@@ -5413,10 +5265,7 @@
         }
       },
       "NewProducts": {
-        "required": [
-          "title",
-          "configuration"
-        ],
+        "required": ["title", "configuration"],
         "properties": {
           "title": {
             "type": "string"
@@ -5458,9 +5307,7 @@
         }
       },
       "Tags": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -5474,11 +5321,7 @@
           "products": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "title",
-                "configuration"
-              ],
+              "required": ["id", "title", "configuration"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -5564,9 +5407,7 @@
         }
       },
       "Warehouse": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -5604,10 +5445,7 @@
         }
       },
       "UsersPermissionsRole": {
-        "required": [
-          "id",
-          "name"
-        ],
+        "required": ["id", "name"],
         "properties": {
           "id": {
             "type": "string"
@@ -5625,13 +5463,7 @@
           "permissions": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
-              ],
+              "required": ["id", "type", "controller", "action", "enabled"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -5666,11 +5498,7 @@
           "users": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
+              "required": ["id", "username", "email"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -5714,9 +5542,7 @@
         }
       },
       "NewUsersPermissionsRole": {
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string",
@@ -5749,11 +5575,7 @@
         }
       },
       "UsersPermissionsUser": {
-        "required": [
-          "id",
-          "username",
-          "email"
-        ],
+        "required": ["id", "username", "email"],
         "properties": {
           "id": {
             "type": "string"
@@ -5778,10 +5600,7 @@
             "default": false
           },
           "role": {
-            "required": [
-              "id",
-              "name"
-            ],
+            "required": ["id", "name"],
             "properties": {
               "id": {
                 "type": "string"
@@ -5818,10 +5637,7 @@
         }
       },
       "NewUsersPermissionsUser": {
-        "required": [
-          "username",
-          "email"
-        ],
+        "required": ["username", "email"],
         "properties": {
           "username": {
             "type": "string",
@@ -5865,10 +5681,7 @@
         }
       },
       "Error": {
-        "required": [
-          "code",
-          "message"
-        ],
+        "required": ["code", "message"],
         "properties": {
           "code": {
             "type": "integer",
