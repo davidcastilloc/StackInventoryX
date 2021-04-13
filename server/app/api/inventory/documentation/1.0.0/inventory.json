@@ -517,138 +517,117 @@
       "Inventory": {
         "required": [
           "id",
-          "actual"
+          "controlid"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "actual": {
-            "type": "number",
-            "default": 0
+          "controlid": {
+            "type": "uid"
           },
-          "min": {
-            "type": "number",
-            "default": 1
+          "stocks": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "actual"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "actual": {
+                  "type": "number"
+                },
+                "warehouse": {
+                  "type": "string"
+                },
+                "inventory": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "max": {
-            "type": "number",
-            "default": 1000
+          "validated": {
+            "type": "boolean",
+            "default": false
           },
-          "product": {
+          "manager": {
             "required": [
               "id",
-              "title",
-              "configuration"
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "firstname": {
                 "type": "string"
               },
-              "sortDescription": {
+              "lastname": {
                 "type": "string"
               },
-              "extendedDescription": {
+              "username": {
                 "type": "string"
               },
-              "skuCode": {
+              "email": {
                 "type": "string"
               },
-              "gallery": {
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "registrationToken": {
+                "type": "string"
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "roles": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "featuredImage": {
-                "type": "string"
-              },
-              "category": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "configuration": {
-                "type": "object"
-              },
-              "inventory": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+              "blocked": {
+                "type": "boolean"
               }
             }
-          },
-          "warehouse": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "location": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
       "NewInventory": {
         "required": [
-          "actual"
+          "controlid"
         ],
         "properties": {
-          "actual": {
-            "type": "number",
-            "default": 0
+          "controlid": {
+            "type": "uid"
           },
-          "min": {
-            "type": "number",
-            "default": 1
+          "stocks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "max": {
-            "type": "number",
-            "default": 1000
+          "validated": {
+            "type": "boolean",
+            "default": false
           },
-          "product": {
+          "manager": {
             "type": "string"
-          },
-          "warehouse": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

@@ -8,28 +8,25 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
-    "actual": {
-      "type": "decimal",
-      "required": true,
-      "default": 0
+    "controlid": {
+      "type": "uid",
+      "required": true
     },
-    "min": {
-      "type": "decimal",
-      "default": 1
-    },
-    "max": {
-      "default": 1000,
-      "type": "decimal"
-    },
-    "product": {
-      "model": "products",
+    "stocks": {
+      "unique": true,
+      "collection": "stock",
       "via": "inventory"
     },
-    "warehouse": {
-      "model": "warehouse"
+    "validated": {
+      "type": "boolean",
+      "default": false
+    },
+    "manager": {
+      "plugin": "admin",
+      "model": "user"
     }
   }
 }

@@ -517,14 +517,10 @@
       "Products": {
         "required": [
           "id",
-          "title",
-          "configuration"
+          "skuCode"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "title": {
             "type": "string"
           },
           "sortDescription": {
@@ -708,7 +704,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "title"
               ],
               "properties": {
                 "id": {
@@ -738,43 +735,24 @@
               }
             }
           },
-          "configuration": {
+          "metadata": {
             "type": "object"
           },
-          "inventory": {
-            "required": [
-              "id",
-              "actual"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actual": {
-                "type": "number"
-              },
-              "min": {
-                "type": "number"
-              },
-              "max": {
-                "type": "number"
-              },
-              "product": {
-                "type": "string"
-              },
-              "warehouse": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "active": {
+            "type": "boolean",
+            "default": true
+          },
+          "activeInPos": {
+            "type": "boolean",
+            "default": true
+          },
+          "useAlerts": {
+            "type": "boolean",
+            "default": true
+          },
+          "useSeries": {
+            "type": "boolean",
+            "default": true
           },
           "published_at": {
             "type": "string",
@@ -784,13 +762,9 @@
       },
       "NewProducts": {
         "required": [
-          "title",
-          "configuration"
+          "skuCode"
         ],
         "properties": {
-          "title": {
-            "type": "string"
-          },
           "sortDescription": {
             "type": "string"
           },
@@ -809,11 +783,24 @@
               "type": "string"
             }
           },
-          "configuration": {
+          "metadata": {
             "type": "object"
           },
-          "inventory": {
-            "type": "string"
+          "active": {
+            "type": "boolean",
+            "default": true
+          },
+          "activeInPos": {
+            "type": "boolean",
+            "default": true
+          },
+          "useAlerts": {
+            "type": "boolean",
+            "default": true
+          },
+          "useSeries": {
+            "type": "boolean",
+            "default": true
           },
           "published_at": {
             "type": "string",

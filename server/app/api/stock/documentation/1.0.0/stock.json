@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/tags": {
+    "/stocks": {
       "get": {
         "deprecated": false,
-        "description": "Find all the tags's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Tags"
+                    "$ref": "#/components/schemas/Stock"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Stock"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new tags record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tags"
+                  "$ref": "#/components/schemas/Stock"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Stock"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTags"
+                "$ref": "#/components/schemas/NewStock"
               }
             }
           }
         }
       }
     },
-    "/tags/count": {
+    "/stocks/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of tags documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Stock"
         ],
         "parameters": []
       }
     },
-    "/tags/{id}": {
+    "/stocks/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one tags record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tags"
+                  "$ref": "#/components/schemas/Stock"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Stock"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single tags record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tags"
+                  "$ref": "#/components/schemas/Stock"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Stock"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTags"
+                "$ref": "#/components/schemas/NewStock"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single tags record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single tags based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Stock"
         ],
         "parameters": [
           {
@@ -514,112 +514,155 @@
   },
   "components": {
     "schemas": {
-      "Tags": {
+      "Stock": {
         "required": [
           "id",
-          "title"
+          "actual"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
-          "metadata": {
-            "type": "object"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "skuCode"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "sortDescription": {
-                  "type": "string"
-                },
-                "extendedDescription": {
-                  "type": "string"
-                },
-                "skuCode": {
-                  "type": "string"
-                },
-                "gallery": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "featuredImage": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "metadata": {
-                  "type": "object"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "activeInPos": {
-                  "type": "boolean"
-                },
-                "useAlerts": {
-                  "type": "boolean"
-                },
-                "useSeries": {
-                  "type": "boolean"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "product": {
+            "required": [
+              "id",
+              "skuCode"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sortDescription": {
+                "type": "string"
+              },
+              "extendedDescription": {
+                "type": "string"
+              },
+              "skuCode": {
+                "type": "string"
+              },
+              "gallery": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "featuredImage": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "metadata": {
+                "type": "object"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "activeInPos": {
+                "type": "boolean"
+              },
+              "useAlerts": {
+                "type": "boolean"
+              },
+              "useSeries": {
+                "type": "boolean"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "actual": {
+            "type": "number"
+          },
+          "warehouse": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "inventory": {
+            "required": [
+              "id",
+              "controlid"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "controlid": {
+                "type": "uid"
+              },
+              "stocks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validated": {
+                "type": "boolean"
+              },
+              "manager": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewTags": {
+      "NewStock": {
         "required": [
-          "title"
+          "actual"
         ],
         "properties": {
-          "title": {
+          "product": {
             "type": "string"
           },
-          "metadata": {
-            "type": "object"
+          "actual": {
+            "type": "number"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "warehouse": {
+            "type": "string"
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "inventory": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -633,7 +676,7 @@
   },
   "tags": [
     {
-      "name": "Tags"
+      "name": "Stock"
     }
   ]
 }

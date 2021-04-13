@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stock",
+  "info": {
+    "name": "stock",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "product": {
+      "model": "products"
+    },
+    "actual": {
+      "type": "decimal",
+      "required": true
+    },
+    "warehouse": {
+      "model": "warehouse"
+    },
+    "inventory": {
+      "via": "stocks",
+      "model": "inventory"
+    }
+  }
+}

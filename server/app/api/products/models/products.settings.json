@@ -11,10 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "sortDescription": {
       "type": "string"
     },
@@ -22,7 +18,9 @@
       "type": "richtext"
     },
     "skuCode": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "gallery": {
       "collection": "file",
@@ -55,13 +53,24 @@
       "via": "products",
       "dominant": true
     },
-    "configuration": {
-      "type": "json",
-      "required": true
+    "metadata": {
+      "type": "json"
     },
-    "inventory": {
-      "via": "product",
-      "model": "inventory"
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "activeInPos": {
+      "type": "boolean",
+      "default": true
+    },
+    "useAlerts": {
+      "type": "boolean",
+      "default": true
+    },
+    "useSeries": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
