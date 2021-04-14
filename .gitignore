@@ -6,4 +6,3 @@ node_modules
 \.pm2/
 \.vue-templates/
 \.ash_history
-client
