@@ -589,7 +589,8 @@
             }
           },
           "active": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "unit_amount": {
             "type": "integer"
@@ -613,7 +614,8 @@
             "type": "string"
           },
           "active": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "unit_amount": {
             "type": "integer"

@@ -16,7 +16,8 @@
       "via": "price"
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "unit_amount": {
       "type": "biginteger",
