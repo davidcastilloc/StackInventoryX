@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prices",
+  "info": {
+    "name": "prices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "product": {
+      "model": "products",
+      "via": "price"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "unit_amount": {
+      "type": "biginteger",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "one_time",
+        "recurring"
+      ],
+      "default": "one_time"
+    }
+  }
+}

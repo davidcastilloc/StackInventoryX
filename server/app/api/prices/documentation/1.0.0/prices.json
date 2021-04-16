@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/products": {
+    "/prices": {
       "get": {
         "deprecated": false,
-        "description": "Find all the products's records",
+        "description": "Find all the prices's records",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve prices document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Products"
+                    "$ref": "#/components/schemas/Prices"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Prices"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new products record",
+        "description": "Create a new prices record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve prices document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Prices"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Prices"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProducts"
+                "$ref": "#/components/schemas/NewPrices"
               }
             }
           }
         }
       }
     },
-    "/products/count": {
+    "/prices/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of products documents",
+        "description": "Retrieve the numver of prices documents",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve prices document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Prices"
         ],
         "parameters": []
       }
     },
-    "/products/{id}": {
+    "/prices/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one products record",
+        "description": "Find one prices record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve prices document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Prices"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Prices"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single products record",
+        "description": "Update a single prices record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve prices document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Prices"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Prices"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProducts"
+                "$ref": "#/components/schemas/NewPrices"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single products record",
+        "description": "Delete a single prices record",
         "responses": {
           "200": {
-            "description": "deletes a single products based on the ID supplied",
+            "description": "deletes a single prices based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Prices"
         ],
         "parameters": [
           {
@@ -514,180 +514,68 @@
   },
   "components": {
     "schemas": {
-      "Products": {
+      "Prices": {
         "required": [
           "id",
-          "skuCode"
+          "unit_amount"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "sortDescription": {
-            "type": "string"
-          },
-          "extendedDescription": {
-            "type": "string"
-          },
-          "skuCode": {
-            "type": "string"
-          },
-          "gallery": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "featuredImage": {
+          "product": {
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "skuCode"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "sortDescription": {
                 "type": "string"
               },
-              "alternativeText": {
+              "extendedDescription": {
                 "type": "string"
               },
-              "caption": {
+              "skuCode": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "cover": {
-                "type": "string"
-              },
-              "products": {
+              "gallery": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "featuredImage": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "metadata": {
+                "type": "object"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "activeInPos": {
+                "type": "boolean"
+              },
+              "useAlerts": {
+                "type": "boolean"
+              },
+              "useSeries": {
+                "type": "boolean"
+              },
+              "price": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -700,147 +588,43 @@
               }
             }
           },
-          "tags": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "metadata": {
-                  "type": "object"
-                },
-                "products": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "metadata": {
-            "type": "object"
-          },
           "active": {
-            "type": "boolean",
-            "default": true
+            "type": "boolean"
           },
-          "activeInPos": {
-            "type": "boolean",
-            "default": true
+          "unit_amount": {
+            "type": "integer"
           },
-          "useAlerts": {
-            "type": "boolean",
-            "default": true
-          },
-          "useSeries": {
-            "type": "boolean",
-            "default": true
-          },
-          "price": {
-            "required": [
-              "id",
-              "unit_amount"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "product": {
-                "type": "string"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "unit_amount": {
-                "type": "integer"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "one_time",
-                  "recurring"
-                ]
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "published_at": {
+          "type": {
             "type": "string",
-            "format": "date-time"
+            "default": "one_time",
+            "enum": [
+              "one_time",
+              "recurring"
+            ]
           }
         }
       },
-      "NewProducts": {
+      "NewPrices": {
         "required": [
-          "skuCode"
+          "unit_amount"
         ],
         "properties": {
-          "sortDescription": {
+          "product": {
             "type": "string"
-          },
-          "extendedDescription": {
-            "type": "string"
-          },
-          "skuCode": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "metadata": {
-            "type": "object"
           },
           "active": {
-            "type": "boolean",
-            "default": true
+            "type": "boolean"
           },
-          "activeInPos": {
-            "type": "boolean",
-            "default": true
+          "unit_amount": {
+            "type": "integer"
           },
-          "useAlerts": {
-            "type": "boolean",
-            "default": true
-          },
-          "useSeries": {
-            "type": "boolean",
-            "default": true
-          },
-          "price": {
-            "type": "string"
-          },
-          "published_at": {
+          "type": {
             "type": "string",
-            "format": "date-time"
+            "default": "one_time",
+            "enum": [
+              "one_time",
+              "recurring"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -854,7 +638,7 @@
   },
   "tags": [
     {
-      "name": "Products"
+      "name": "Prices"
     }
   ]
 }
