@@ -7,3 +7,9 @@ node_modules
 \.vue-templates/
 \.ash_history
 client
+
+############################
+# Docker
+############################
+docker-compose.override.yml
+.env

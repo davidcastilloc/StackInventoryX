@@ -3,9 +3,8 @@ services:
   frontend:
     container_name: frontend
     build:
-      context: client/
-    working_dir: "/srv/app"
-    command: sh -c "yarn install  && yarn run dev"
+      target: development
+    command: yarn dev
     volumes:
       - ./client:/srv/app
     ports:
@@ -25,8 +24,10 @@ services:
   strapi:
     container_name: strapi
     build:
-      context: server/app
+      target: development
+    command: yarn develop
     environment:
+      - NODE_ENV=development
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
       - DATABASE_PORT=27017
@@ -36,8 +37,6 @@ services:
       - AUTHENTICATION_DATABASE=strapi
     ports:
       - 1337:1337
-    volumes:
-      - ./server/app:/srv/app
     depends_on:
       - db
   db:

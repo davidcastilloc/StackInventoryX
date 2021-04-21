@@ -1,5 +1,5 @@
-node_modules
 npm-debug.log
+.strapi-updater.json
 Dockerfile
 .dockerignore
 .git
