@@ -71,6 +71,10 @@
     "useSeries": {
       "type": "boolean",
       "default": true
+    },
+    "price": {
+      "via": "product",
+      "model": "prices"
     }
   }
 }
