@@ -3,15 +3,19 @@ services:
   frontend:
     container_name: frontend
     build:
-      target: development
+      target: build
+      context: client
     command: yarn dev
-    volumes:
-      - ./client:/srv/app
+    env_file: .env
     ports:
       - 3202:3000
+    volumes:
+      - ./client:/srv/app:cached
     environment:
-      HOST: "0.0.0.0"
-    tty: true
+      NODE_ENV: developer
+      HOST: ${HOST}
+      API_AUTH_URL: ${API_AUTH_URL}
+      STRIPE_PK: ${STRIPE_PK}
   nginx:
     image: nginx:latest
     container_name: nginx
@@ -24,10 +28,11 @@ services:
   strapi:
     container_name: strapi
     build:
-      target: development
-    command: yarn develop
+      target: production
+      context: server/app
+    command: yarn start
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
       - DATABASE_PORT=27017
