@@ -7,8 +7,6 @@ services:
       context: client/
     working_dir: "/srv/app"
     command: yarn dev
-    volumes:
-      - ./client:/srv/app
     ports:
       - 3202:3000
     environment:
