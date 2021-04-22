@@ -5,7 +5,6 @@ services:
     build:
       target: development
       context: client/
-    working_dir: "/srv/app"
     command: yarn dev
     ports:
       - 3202:3000
