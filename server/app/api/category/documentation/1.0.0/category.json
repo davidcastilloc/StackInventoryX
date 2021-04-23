@@ -648,9 +648,6 @@
                 "price": {
                   "type": "string"
                 },
-                "published_at": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -659,10 +656,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -676,10 +669,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

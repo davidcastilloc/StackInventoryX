@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/16/2021 4:23:36 PM"
+    "x-generation-date": "04/23/2021 6:38:17 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5985,9 +5985,6 @@
                 "price": {
                   "type": "string"
                 },
-                "published_at": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -5996,10 +5993,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -6013,10 +6006,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -6210,9 +6199,6 @@
                 "type": "boolean"
               },
               "price": {
-                "type": "string"
-              },
-              "published_at": {
                 "type": "string"
               },
               "created_by": {
@@ -6446,9 +6432,6 @@
                   "type": "string"
                 }
               },
-              "published_at": {
-                "type": "string"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -6543,10 +6526,6 @@
                 "type": "string"
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -6594,10 +6573,6 @@
           },
           "price": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -6668,9 +6643,6 @@
                 "type": "boolean"
               },
               "price": {
-                "type": "string"
-              },
-              "published_at": {
                 "type": "string"
               },
               "created_by": {
@@ -6837,9 +6809,6 @@
                   "type": "boolean"
                 },
                 "price": {
-                  "type": "string"
-                },
-                "published_at": {
                   "type": "string"
                 },
                 "created_by": {
