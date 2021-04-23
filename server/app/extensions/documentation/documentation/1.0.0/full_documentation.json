@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/23/2021 6:38:17 PM"
+    "x-generation-date": "04/23/2021 11:11:01 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6961,7 +6961,11 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "firstName",
+                "lastName",
+                "address",
+                "city"
               ],
               "properties": {
                 "id": {
@@ -6992,6 +6996,27 @@
                   "type": "boolean"
                 },
                 "role": {
+                  "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                },
+                "company": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7044,7 +7069,11 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "firstName",
+          "lastName",
+          "address",
+          "city"
         ],
         "properties": {
           "id": {
@@ -7106,13 +7135,38 @@
                 "type": "string"
               }
             }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "firstName",
+          "lastName",
+          "address",
+          "city"
         ],
         "properties": {
           "username": {
@@ -7146,6 +7200,27 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "company": {
             "type": "string"
           },
           "created_by": {

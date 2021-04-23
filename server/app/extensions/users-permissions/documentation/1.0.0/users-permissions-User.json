@@ -1188,7 +1188,11 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "firstName",
+          "lastName",
+          "address",
+          "city"
         ],
         "properties": {
           "id": {
@@ -1250,13 +1254,38 @@
                 "type": "string"
               }
             }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "firstName",
+          "lastName",
+          "address",
+          "city"
         ],
         "properties": {
           "username": {
@@ -1290,6 +1319,27 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "company": {
             "type": "string"
           },
           "created_by": {
