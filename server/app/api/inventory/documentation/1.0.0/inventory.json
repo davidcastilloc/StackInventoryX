@@ -565,16 +565,15 @@
           "manager": {
             "required": [
               "id",
-              "email"
+              "username",
+              "email",
+              "firstName",
+              "lastName",
+              "address",
+              "city"
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "firstname": {
-                "type": "string"
-              },
-              "lastname": {
                 "type": "string"
               },
               "username": {
@@ -583,26 +582,59 @@
               "email": {
                 "type": "string"
               },
+              "provider": {
+                "type": "string"
+              },
               "password": {
                 "type": "string"
               },
               "resetPasswordToken": {
                 "type": "string"
               },
-              "registrationToken": {
+              "confirmationToken": {
                 "type": "string"
               },
-              "isActive": {
+              "confirmed": {
                 "type": "boolean"
               },
-              "roles": {
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "company": {
+                "type": "string"
+              },
+              "inventories": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "blocked": {
-                "type": "boolean"
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }

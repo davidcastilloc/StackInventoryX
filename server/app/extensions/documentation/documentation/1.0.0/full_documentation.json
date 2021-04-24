@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/23/2021 11:11:01 PM"
+    "x-generation-date": "04/24/2021 6:39:53 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6066,16 +6066,15 @@
           "manager": {
             "required": [
               "id",
-              "email"
+              "username",
+              "email",
+              "firstName",
+              "lastName",
+              "address",
+              "city"
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "firstname": {
-                "type": "string"
-              },
-              "lastname": {
                 "type": "string"
               },
               "username": {
@@ -6084,26 +6083,59 @@
               "email": {
                 "type": "string"
               },
+              "provider": {
+                "type": "string"
+              },
               "password": {
                 "type": "string"
               },
               "resetPasswordToken": {
                 "type": "string"
               },
-              "registrationToken": {
+              "confirmationToken": {
                 "type": "string"
               },
-              "isActive": {
+              "confirmed": {
                 "type": "boolean"
               },
-              "roles": {
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "company": {
+                "type": "string"
+              },
+              "inventories": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "blocked": {
-                "type": "boolean"
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -7019,6 +7051,12 @@
                 "company": {
                   "type": "string"
                 },
+                "inventories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7156,6 +7194,41 @@
           },
           "company": {
             "type": "string"
+          },
+          "inventories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "controlid"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "controlid": {
+                  "type": "uid"
+                },
+                "stocks": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "validated": {
+                  "type": "boolean"
+                },
+                "manager": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -7222,6 +7295,12 @@
           },
           "company": {
             "type": "string"
+          },
+          "inventories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
