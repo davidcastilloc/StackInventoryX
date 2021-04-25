@@ -523,68 +523,6 @@
           "id": {
             "type": "string"
           },
-          "product": {
-            "required": [
-              "id",
-              "skuCode"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "sortDescription": {
-                "type": "string"
-              },
-              "extendedDescription": {
-                "type": "string"
-              },
-              "skuCode": {
-                "type": "string"
-              },
-              "gallery": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "featuredImage": {
-                "type": "string"
-              },
-              "category": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "metadata": {
-                "type": "object"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "activeInPos": {
-                "type": "boolean"
-              },
-              "useAlerts": {
-                "type": "boolean"
-              },
-              "useSeries": {
-                "type": "boolean"
-              },
-              "price": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "active": {
             "type": "boolean",
             "default": true
@@ -607,9 +545,6 @@
           "unit_amount"
         ],
         "properties": {
-          "product": {
-            "type": "string"
-          },
           "active": {
             "type": "boolean",
             "default": true

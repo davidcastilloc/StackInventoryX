@@ -532,76 +532,6 @@
           "skuCode": {
             "type": "string"
           },
-          "gallery": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "featuredImage": {
             "required": [
               "id",
@@ -732,9 +662,6 @@
               }
             }
           },
-          "metadata": {
-            "type": "object"
-          },
           "active": {
             "type": "boolean",
             "default": true
@@ -752,37 +679,7 @@
             "default": true
           },
           "price": {
-            "required": [
-              "id",
-              "unit_amount"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "product": {
-                "type": "string"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "unit_amount": {
-                "type": "integer"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "one_time",
-                  "recurring"
-                ]
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+            "type": "number"
           }
         }
       },
@@ -809,9 +706,6 @@
               "type": "string"
             }
           },
-          "metadata": {
-            "type": "object"
-          },
           "active": {
             "type": "boolean",
             "default": true
@@ -829,7 +723,7 @@
             "default": true
           },
           "price": {
-            "type": "string"
+            "type": "number"
           },
           "created_by": {
             "type": "string"

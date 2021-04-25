@@ -11,10 +11,6 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "product": {
-      "via": "price",
-      "model": "products"
-    },
     "active": {
       "type": "boolean",
       "default": true

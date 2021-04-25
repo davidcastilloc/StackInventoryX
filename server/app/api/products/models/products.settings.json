@@ -22,17 +22,6 @@
       "unique": true,
       "required": true
     },
-    "gallery": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "featuredImage": {
       "model": "file",
       "via": "related",
@@ -53,9 +42,6 @@
       "via": "products",
       "dominant": true
     },
-    "metadata": {
-      "type": "json"
-    },
     "active": {
       "type": "boolean",
       "default": true
@@ -73,8 +59,7 @@
       "default": true
     },
     "price": {
-      "model": "prices",
-      "via": "product"
+      "type": "decimal"
     }
   }
 }

@@ -612,12 +612,6 @@
                 "skuCode": {
                   "type": "string"
                 },
-                "gallery": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "featuredImage": {
                   "type": "string"
                 },
@@ -629,9 +623,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "metadata": {
-                  "type": "object"
                 },
                 "active": {
                   "type": "boolean"
@@ -646,7 +637,7 @@
                   "type": "boolean"
                 },
                 "price": {
-                  "type": "string"
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"
