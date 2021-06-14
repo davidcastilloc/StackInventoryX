@@ -1,0 +1,45 @@
+###
+GET http://localhost:4501/employees
+
+###
+GET http://localhost:4501/employee/60c6dd70f4d093fbd56a124f
+
+###
+GET http://localhost:4501/employeeCompany/60c6dbfbf4d093fbd56a124a
+
+###
+GET http://localhost:4501/employeeEmail
+Content-Type: application/json
+
+{
+    "email_": "levi@gmail.com"
+}
+
+###
+POST http://localhost:4501/addEmployee
+Content-Type: application/json
+
+{
+    "name": "Juan Centeno",
+    "Email": "juan@gmail.com",
+    "company": "60c6dbfbf4d093fbd56a124a"
+}
+
+###
+PUT http://localhost:4501/editEmployee/60c6dd70f4d093fbd56a124f
+Content-Type: application/json
+
+{
+    "name": "Leia Centeno",
+    "email": "leia@gmail.com",
+    "company": "60c6dc09f4d093fbd56a124b",
+    "status": true
+}
+
+###
+DELETE http://localhost:4501/deleteEmployee
+Content-Type: application/json
+
+{
+    "delete_": "60c6dd30f4d093fbd56a124e"
+}

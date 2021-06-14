@@ -1,0 +1,31 @@
+###
+GET http://localhost:4501/companys
+
+###
+GET http://localhost:4501/company/60c6b6283503acba2d415e47
+
+###
+POST http://localhost:4501/addCompany
+Content-Type: application/json
+
+{
+    "name": "Salomon C.A",
+    "direction": "New York"
+}
+
+###
+PUT http://localhost:4501/editCompany/60c6b6283503acba2d415e47
+Content-Type: application/json
+
+{
+    "name": "David C.A",
+    "direction": "Boston"
+}
+
+###
+DELETE http://localhost:4501/deleteCompany
+Content-Type: application/json
+
+{
+    "delete_": "60c6b6113503acba2d415e46"
+}
