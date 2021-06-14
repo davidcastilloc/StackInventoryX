@@ -1,0 +1,8 @@
+FROM node:lts-alpine3.13  as development
+LABEL name="frontend_development"
+ENV NODE_ENV=development
+WORKDIR /srv/app
+COPY .env ./.env
+COPY package.json package.json
+RUN yarn
+EXPOSE 3000

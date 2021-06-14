@@ -11,6 +11,16 @@ services:
     environment:
       HOST: "0.0.0.0"
     tty: true
+  backend:
+    container_name: backend
+    build:
+      target: build
+      context: backend/
+    command: yarn start
+    ports:
+      - 4501:4501
+    depends_on:
+      - db
   nginx:
     image: nginx:latest
     container_name: nginx

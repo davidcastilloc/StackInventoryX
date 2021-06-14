@@ -1,12 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost/inventory' , {
+mongoose
+  .connect("mongodb://db/inventory", {
     useCreateIndex: true,
-    useNewUrlParser: true, 
+    useNewUrlParser: true,
     useFindAndModify: true,
-    useUnifiedTopology: true
-})
-    .then(db=>console.log('DB is On'))
-    .catch(err=>console.error(err))
+    useUnifiedTopology: true,
+  })
+  .then((db) => console.log("DB is On"))
+  .catch((err) => console.error(err));
 
-    module.exports = mongoose
+module.exports = mongoose;
