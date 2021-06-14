@@ -3,7 +3,7 @@ LABEL name="strapi_build"
 ENV NODE_ENV=development
 WORKDIR /srv/app
 COPY . ./
-RUN npm install && npm run build
+RUN yarn install && yarn run build
 
 FROM strapi/strapi:3.6.3-alpine as production
 LABEL name="strapi_production"
