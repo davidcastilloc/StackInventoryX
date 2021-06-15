@@ -27,11 +27,10 @@ por ultimo la build para el frontend
 docker-compose run sh frontend
 
 ```
+
 luego dentro de la consola
 ```
 
-yarn && yarn build
-
 ```
-
+yarn && yarn build
 ```
