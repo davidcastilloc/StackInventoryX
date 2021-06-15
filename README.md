@@ -24,12 +24,12 @@ yarn && yarn build
 ```
 
 por ultimo la build para el frontend
-docker-compose run sh frontend
 
+```
+docker-compose run sh frontend
 ```
 
 luego dentro de la consola
-```
 
 ```
 yarn && yarn build
