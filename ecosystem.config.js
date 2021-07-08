@@ -22,7 +22,7 @@ module.exports = {
       host: "8112b9a.online-server.cloud",
       ref: "origin/master",
       repo: "git@github.com:davidcastilloc/StackInventoryX.git",
-      path: "/var/www/html",
+      path: "/var/www/html/client",
       "pre-deploy": "git fetch --all",
       "post-deploy":
         "yarn install && yarn build && pm2 reload ecosystem.config.js --env production",
