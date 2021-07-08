@@ -21,7 +21,7 @@ module.exports = {
       user: "root",
       host: "8112b9a.online-server.cloud",
       ref: "origin/master",
-      repo: "git@github.com:davidcastilloc/StackInventoryX.git",
+      repo: "git@github.com:davidcastilloc/InventoryX2.git",
       path: "/var/www/html",
       "pre-deploy": "git fetch --all",
       "post-deploy":
