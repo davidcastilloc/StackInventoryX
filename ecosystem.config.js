@@ -20,7 +20,7 @@ module.exports = {
     production: {
       user: "root",
       host: "8112b9a.online-server.cloud",
-      ref: "origin/master",
+      ref: "origin/main",
       repo: "git@github.com:davidcastilloc/InventoryX2.git",
       path: "/var/www/html",
       "pre-deploy": "git fetch --all",
