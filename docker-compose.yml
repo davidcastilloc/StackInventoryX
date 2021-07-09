@@ -59,3 +59,22 @@ services:
     volumes:
       - ./db:/data/db
     restart: always
+  proxymanager:
+      image: 'jc21/nginx-proxy-manager:latest'
+      ports:
+        - '80:80'
+        - '81:81'
+        - '443:443'
+      volumes:
+        - ./proxymanager/config.json:/app/config/production.json
+        - ./proxymanager/data:/data
+        - ./letsencrypt:/etc/letsencrypt
+  proxymanagerdb:
+    image: 'jc21/mariadb-aria:10.4'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'npm'
+      MYSQL_DATABASE: 'npm'
+      MYSQL_USER: 'npm'
+      MYSQL_PASSWORD: 'npm'
+    volumes:
+      - ./proxymanager/data/mysql:/var/lib/mysql
