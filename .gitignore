@@ -13,3 +13,5 @@ client
 ############################
 docker-compose.override.yml
 .env
+proxymanager/data
+letsencrypt
