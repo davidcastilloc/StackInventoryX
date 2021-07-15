@@ -6,7 +6,7 @@ services:
       target: development
       context: client/
     ports:
-      - 3202:3000
+      - 3000:3000
     environment:
       HOST: "0.0.0.0"
     tty: true
@@ -53,7 +53,7 @@ services:
       image: 'jc21/nginx-proxy-manager:latest'
       ports:
         - '80:80'
-        - '81:1337'
+        - '81:81'
         - '443:443'
       volumes:
         - ./proxymanager/config.json:/app/config/production.json
