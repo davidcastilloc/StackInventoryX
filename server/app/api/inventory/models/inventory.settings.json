@@ -25,9 +25,9 @@
       "default": false
     },
     "manager": {
+      "via": "inventories",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "inventories"
+      "model": "user"
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/24/2021 8:32:12 PM"
+    "x-generation-date": "07/22/2021 9:49:18 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6062,7 +6062,8 @@
               "firstName",
               "lastName",
               "address",
-              "city"
+              "city",
+              "wizardIsDone"
             ],
             "properties": {
               "id": {
@@ -6121,6 +6122,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "wizardIsDone": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -6799,7 +6803,8 @@
                 "firstName",
                 "lastName",
                 "address",
-                "city"
+                "city",
+                "wizardIsDone"
               ],
               "properties": {
                 "id": {
@@ -6859,6 +6864,9 @@
                     "type": "string"
                   }
                 },
+                "wizardIsDone": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -6913,7 +6921,8 @@
           "firstName",
           "lastName",
           "address",
-          "city"
+          "city",
+          "wizardIsDone"
         ],
         "properties": {
           "id": {
@@ -7031,6 +7040,10 @@
                 }
               }
             }
+          },
+          "wizardIsDone": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -7041,7 +7054,8 @@
           "firstName",
           "lastName",
           "address",
-          "city"
+          "city",
+          "wizardIsDone"
         ],
         "properties": {
           "username": {
@@ -7103,6 +7117,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "wizardIsDone": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"

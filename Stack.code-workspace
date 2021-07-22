@@ -13,5 +13,7 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "html-css-class-completion.includeGlobPattern": "client/assets/*.{css}"
+  }
 }

@@ -86,8 +86,13 @@
       "type": "string"
     },
     "inventories": {
-      "via": "manager",
-      "collection": "inventory"
+      "collection": "inventory",
+      "via": "manager"
+    },
+    "wizardIsDone": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

@@ -3,42 +3,50 @@ services:
   frontend:
     container_name: frontend
     build:
-      target: development
-      context: client/
+      target: build
+      context: client
     ports:
       - 3000:3000
-    environment:
-      HOST: "0.0.0.0"
+    volumes:
+      - /srv/app/node_modules
     tty: true
+    depends_on:
+      - strapi
+
   backend:
     container_name: backend
     build:
       target: build
       context: backend/
+    volumes:
+      - /srv/app/node_modules
     ports:
       - 4501:4501
     depends_on:
       - db
       - proxymanager
+
   strapi:
-      container_name: strapi
-      build:
-        target: build
-        context: server/app
-      environment:
-        - DATABASE_CLIENT=mongo
-        - DATABASE_HOST=db
-        - DATABASE_PORT=27017
-        - DATABASE_NAME=strapi
-        - DATABASE_USERNAME=
-        - DATABASE_PASSWORD=
-        - AUTHENTICATION_DATABASE=strapi
-      ports:
-        - 1337:1337
-      volumes:
-        - ./server/app:/srv/app
-      depends_on:
-        - db
+    container_name: strapi
+    build:
+      target: build
+      context: server/app
+    environment:
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=
+      - DATABASE_PASSWORD=
+      - AUTHENTICATION_DATABASE=strapi
+    ports:
+      - 1337:1337
+    volumes:
+      - ./server/app:/srv/app
+      - /srv/app/node_modules
+    depends_on:
+      - db
+
   db:
     container_name: mongo
     image: mongo
@@ -49,24 +57,25 @@ services:
     volumes:
       - ./db:/data/db
     restart: always
+
   proxymanager:
-      image: 'jc21/nginx-proxy-manager:latest'
-      ports:
-        - '80:80'
-        - '81:81'
-        - '443:443'
-      volumes:
-        - ./proxymanager/config.json:/app/config/production.json
-        - ./proxymanager/data:/data
-        - ./letsencrypt:/etc/letsencrypt
-      depends_on:
-        - proxymanagerdb
+    image: "jc21/nginx-proxy-manager:latest"
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    volumes:
+      - ./proxymanager/config.json:/app/config/production.json
+      - ./proxymanager/data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    depends_on:
+      - proxymanagerdb
   proxymanagerdb:
-    image: 'jc21/mariadb-aria:10.4'
+    image: "jc21/mariadb-aria:10.4"
     environment:
-      MYSQL_ROOT_PASSWORD: 'npm'
-      MYSQL_DATABASE: 'npm'
-      MYSQL_USER: 'npm'
-      MYSQL_PASSWORD: 'npm'
+      MYSQL_ROOT_PASSWORD: "npm"
+      MYSQL_DATABASE: "npm"
+      MYSQL_USER: "npm"
+      MYSQL_PASSWORD: "npm"
     volumes:
       - ./proxymanager/data/mysql:/var/lib/mysql

@@ -532,7 +532,8 @@
                 "firstName",
                 "lastName",
                 "address",
-                "city"
+                "city",
+                "wizardIsDone"
               ],
               "properties": {
                 "id": {
@@ -591,6 +592,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "wizardIsDone": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"

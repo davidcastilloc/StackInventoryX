@@ -1192,7 +1192,8 @@
           "firstName",
           "lastName",
           "address",
-          "city"
+          "city",
+          "wizardIsDone"
         ],
         "properties": {
           "id": {
@@ -1310,6 +1311,10 @@
                 }
               }
             }
+          },
+          "wizardIsDone": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -1320,7 +1325,8 @@
           "firstName",
           "lastName",
           "address",
-          "city"
+          "city",
+          "wizardIsDone"
         ],
         "properties": {
           "username": {
@@ -1382,6 +1388,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "wizardIsDone": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"

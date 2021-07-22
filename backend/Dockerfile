@@ -1,9 +1,10 @@
 FROM node:lts-alpine3.13  as build
 LABEL name="backend_build"
-ENV NODE_ENV=development
 WORKDIR /srv/app
-COPY . ./
-RUN yarn --verbose 
+COPY package*.json ./
+ENV NODE_ENV=development
+RUN yarn 
+CMD ["yarn", "dev"]
 
 FROM node:lts-alpine3.13  as production
 LABEL name="backend_production"

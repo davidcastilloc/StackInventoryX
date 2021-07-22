@@ -2,8 +2,8 @@ FROM strapi/strapi:3.6.3-alpine as build
 LABEL name="strapi_build"
 ENV NODE_ENV=development
 WORKDIR /srv/app
-COPY . ./
-RUN yarn install && yarn run build
+COPY package*.json ./
+RUN yarn && yarn build
 CMD ["yarn", "develop"]
 
 FROM strapi/strapi:3.6.3-alpine as production

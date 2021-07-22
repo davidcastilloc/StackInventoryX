@@ -6,3 +6,4 @@ server/app/node_modules
 .dockerignore
 .git
 .gitignore
+node_modules/
