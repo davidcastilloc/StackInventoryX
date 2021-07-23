@@ -28,9 +28,7 @@ services:
 
   strapi:
     container_name: strapi
-    build:
-      target: build
-      context: server/app
+    image: strapi/strapi
     environment:
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
