@@ -12,7 +12,6 @@ services:
     tty: true
     depends_on:
       - strapi
-
   backend:
     container_name: backend
     build:
@@ -25,7 +24,6 @@ services:
     depends_on:
       - db
       - proxymanager
-
   strapi:
     container_name: strapi
     image: strapi/strapi
@@ -41,7 +39,6 @@ services:
       - 1337:1337
     volumes:
       - ./server/app:/srv/app
-      - /srv/app/node_modules
     depends_on:
       - db
 
@@ -54,7 +51,6 @@ services:
       - 27017:27017
     volumes:
       - ./db:/data/db
-    restart: always
 
   proxymanager:
     image: "jc21/nginx-proxy-manager:latest"
