@@ -7,13 +7,10 @@
       "path": "server/app"
     },
     {
-      "path": "nginx"
-    },
-    {
       "path": "."
     }
   ],
   "settings": {
-    "html-css-class-completion.includeGlobPattern": "client/assets/*.{css}"
+    "html-css-class-completion.includeGlobPattern": "client/assets/nucleo/*.{css}"
   }
 }

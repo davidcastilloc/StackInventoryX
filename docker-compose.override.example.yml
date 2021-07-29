@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  frontend:
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/srv/app:cached
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      HOST: ${HOST}
+      API_AUTH_URL: ${API_AUTH_URL}
+      STRIPE_PK: ${STRIPE_PK}
+    tty: true
+  backend:
+    volumes:
+      - ./backend:/srv/app:cached
+    environment:
+      NODE_ENV: ${NODE_ENV}
+  strapi:
+    build:
+      target: build
+      context: server/app
+    environment:
+      - NODE_ENV=development
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=
+      - DATABASE_PASSWORD=
+      - AUTHENTICATION_DATABASE=strapi
+    ports:
+      - 1337:1337
+    depends_on:
+      - db
+  db:
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    restart: always

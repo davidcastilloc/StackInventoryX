@@ -3,6 +3,7 @@ LABEL name="strapi_build"
 ENV NODE_ENV=development
 WORKDIR /srv/app
 COPY package*.json ./
+COPY yarn.lock ./
 RUN yarn && yarn build
 CMD ["yarn", "develop"]
 
