@@ -1281,15 +1281,11 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "controlid"
+                "id"
               ],
               "properties": {
                 "id": {
                   "type": "string"
-                },
-                "controlid": {
-                  "type": "uid"
                 },
                 "stocks": {
                   "type": "array",

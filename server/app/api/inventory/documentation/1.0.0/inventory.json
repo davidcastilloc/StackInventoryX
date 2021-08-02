@@ -516,15 +516,11 @@
     "schemas": {
       "Inventory": {
         "required": [
-          "id",
-          "controlid"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "controlid": {
-            "type": "uid"
           },
           "stocks": {
             "type": "array",
@@ -645,13 +641,7 @@
         }
       },
       "NewInventory": {
-        "required": [
-          "controlid"
-        ],
         "properties": {
-          "controlid": {
-            "type": "uid"
-          },
           "stocks": {
             "type": "array",
             "items": {
