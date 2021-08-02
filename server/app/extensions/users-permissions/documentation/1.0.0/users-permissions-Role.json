@@ -596,6 +596,46 @@
                 "wizardIsDone": {
                   "type": "boolean"
                 },
+                "transactions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "move": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "users_permissions_role": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -629,6 +669,12 @@
             }
           },
           "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "transactions": {
             "type": "array",
             "items": {
               "type": "string"

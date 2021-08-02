@@ -93,6 +93,10 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "transactions": {
+      "via": "users_permissions_user",
+      "collection": "transaction"
     }
   }
 }

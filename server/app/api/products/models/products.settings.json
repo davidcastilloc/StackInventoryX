@@ -60,6 +60,10 @@
     },
     "price": {
       "type": "decimal"
+    },
+    "transactions": {
+      "via": "product",
+      "collection": "transaction"
     }
   }
 }

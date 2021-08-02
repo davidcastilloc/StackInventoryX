@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transaction",
+  "info": {
+    "name": "transaction",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "product": {
+      "model": "products",
+      "via": "transactions"
+    },
+    "move": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "transactions"
+    },
+    "users_permissions_role": {
+      "plugin": "users-permissions",
+      "model": "role",
+      "via": "transactions"
+    }
+  }
+}

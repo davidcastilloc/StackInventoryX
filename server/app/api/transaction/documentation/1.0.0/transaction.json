@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/transactions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Transaction"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Transaction"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Transaction"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewTransaction"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/transactions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Transaction"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/transactions/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Transaction"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Transaction"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Transaction"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewTransaction"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Transaction": {
         "required": [
           "id"
         ],
@@ -522,67 +522,56 @@
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
-          "cover": {
+          "product": {
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "skuCode"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "sortDescription": {
                 "type": "string"
               },
-              "alternativeText": {
+              "extendedDescription": {
                 "type": "string"
               },
-              "caption": {
+              "skuCode": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "featuredImage": {
                 "type": "string"
               },
-              "ext": {
+              "category": {
                 "type": "string"
               },
-              "mime": {
-                "type": "string"
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "size": {
+              "active": {
+                "type": "boolean"
+              },
+              "activeInPos": {
+                "type": "boolean"
+              },
+              "useAlerts": {
+                "type": "boolean"
+              },
+              "useSeries": {
+                "type": "boolean"
+              },
+              "price": {
                 "type": "number"
               },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
+              "transactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -592,80 +581,162 @@
               }
             }
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "skuCode"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "sortDescription": {
-                  "type": "string"
-                },
-                "extendedDescription": {
-                  "type": "string"
-                },
-                "skuCode": {
-                  "type": "string"
-                },
-                "featuredImage": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "activeInPos": {
-                  "type": "boolean"
-                },
-                "useAlerts": {
-                  "type": "boolean"
-                },
-                "useSeries": {
-                  "type": "boolean"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "transactions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "move": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "users_permissions_user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "firstName",
+              "lastName",
+              "address",
+              "city",
+              "wizardIsDone"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "company": {
+                "type": "string"
+              },
+              "inventories": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "wizardIsDone": {
+                "type": "boolean"
+              },
+              "transactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "users_permissions_role": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "transactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
         }
       },
-      "NewCategory": {
+      "NewTransaction": {
         "properties": {
-          "title": {
+          "product": {
             "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "move": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "users_permissions_user": {
+            "type": "string"
+          },
+          "users_permissions_role": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -679,7 +750,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Transaction"
     }
   ]
 }
