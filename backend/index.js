@@ -13,8 +13,9 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 //routes
 app.use(require("./routers/Company"));
 app.use(require("./routers/Employee"));
+app.use(require("./routers/Bill"));
 
 //listen
-app.listen(app.get("port"), ()=>{
-    console.log(`Server ${app.get("port")}`);
-})
+app.listen(app.get("port"), () => {
+  console.log(`Server ${app.get("port")}`);
+});

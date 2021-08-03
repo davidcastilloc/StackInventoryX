@@ -1,0 +1,21 @@
+###
+POST http://localhost:4501/createBill
+Content-Type: application/json
+
+{
+    "company" : "hash company",
+    "article": [
+        { 
+            "company": "test",
+            "product": "coca cola",
+            "amount": 50,
+            "price": 1.78
+        },
+        { 
+            "company": "test 1",
+            "product": "pepsi",
+            "amount": 50,
+            "price": 3.14
+        }
+    ]
+}
