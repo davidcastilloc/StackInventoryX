@@ -13,7 +13,7 @@ router.post("/createBill", async (req, res) => {
       total,
       date,
     });
-    console.log(newBill);
+    await newBill.save();
     res.status(200).send(newBill);
   } catch (error) {
     console.log(error);

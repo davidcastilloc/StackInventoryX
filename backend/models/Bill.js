@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const ArticleBill = new Schema({
   company: String,
-  product: String,
+  product: { type: Schema.ObjectId, ref: "product" },
   amount: Number,
   price: Number
 })
