@@ -33,10 +33,14 @@ router.get("/company/:id", async (req, res) => {
 
 router.post("/addCompany", async (req, res) => {
   try {
-    const { name, direction } = req.body;
+    const { name, address, city, state, zip, responsable } = req.body;
     const newCompany = new Company({
       name,
-      direction,
+      address,
+      city,
+      state,
+      zip,
+      responsable
     });
     await newCompany.save();
     res.status(200).json({
@@ -53,8 +57,8 @@ router.post("/addCompany", async (req, res) => {
 
 router.put("/editCompany/:id", async (req, res) => {
   try {
-    const { name, direction, status } = req.body;
-    const Update = { name, direction };
+    const { name, address, status , city, state, zip, responsable } = req.body;
+    const Update = { name, address, status , city, state, zip, responsable };
     await Company.findByIdAndUpdate(req.params.id, Update);
     res.status(200).json({
       status: "ok",

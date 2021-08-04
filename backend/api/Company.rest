@@ -9,17 +9,36 @@ POST http://localhost:4501/addCompany
 Content-Type: application/json
 
 {
-    "name": "Salomon C.A",
-    "direction": "New York"
+    "name": "David C.A",
+    "address": "1408 Queens",
+    "city": "Queens",
+    "state": "New York",
+    "zip": "11009",
+    "responsable": {
+        "firstName": "David",
+        "lastName": "Castillo",
+        "phone": "+17180000000"
+    }
+
 }
 
 ###
-PUT http://localhost:4501/editCompany/60c6b6283503acba2d415e47
+PUT http://localhost:4501/editCompany/6109dcdd6b90531ad60ab4b2
 Content-Type: application/json
 
 {
     "name": "David C.A",
-    "direction": "Boston"
+    "address": "1408 Queens",
+    "city": "Queens",
+    "state": "New York",
+    "zip": "11009",
+    "status": true,
+    "responsable": {
+        "firstName": "David José",
+        "lastName": "Castillo",
+        "phone": "+17180000000"
+    }
+
 }
 
 ###
@@ -27,5 +46,5 @@ DELETE http://localhost:4501/deleteCompany
 Content-Type: application/json
 
 {
-    "delete_": "60c6b6113503acba2d415e46"
+    "delete_": "6109dd0c6b90531ad60ab4c1"
 }
