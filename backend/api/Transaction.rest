@@ -11,13 +11,13 @@ Content-Type: application/json
 {
     "company": "6109db9feb28e118af55064a",
     "employee": "6109df606067cb1fd9544a44",
-    "move": 10,
+    "move": -100,
     "product": "610a004b105d384a24fccc2f",
     "warehouse": "610a0ea2cff3c16cf79bda7d"
 }
 
 ###
-PUT http://localhost:4501/reverseTransactions/610a22463d3047a2f529843d
+PUT http://localhost:4501/reverseTransactions/610a3b3264534ed7fdf576ca
 Content-Type: application/json
 
 {

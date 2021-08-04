@@ -47,8 +47,15 @@ router.post("/addTransactions", async (req, res) => {
 
 router.put("/reverseTransactions/:id", async (req, res) => {
   try {
-    const { onceReverse } = req.body;
-    const Update = { onceReverse };
+    const moveR = await Transaction.find({ _id: req.params.id});
+    var move = moveR[0].move;
+    var onceReverse = moveR[0].onceReverse ;
+
+    if(onceReverse === false){
+      move = moveR[0].move * -1
+      onceReverse = true;
+    }
+    const Update = { onceReverse, move };
     await Transaction.findByIdAndUpdate(req.params.id, Update);
     res.status(200).send("ok");
   } catch (error) {
