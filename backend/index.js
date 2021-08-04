@@ -17,6 +17,8 @@ app.use(require("./routers/Bill"));
 app.use(require("./routers/Product"));
 app.use(require("./routers/Warehouse"));
 app.use(require("./routers/Plan"));
+app.use(require("./routers/Transaction"));
+
 
 //listen
 app.listen(app.get("port"), () => {
