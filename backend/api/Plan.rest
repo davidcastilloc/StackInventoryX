@@ -1,0 +1,26 @@
+###
+GET http://localhost:4501/allPlansCompany
+
+###
+GET http://localhost:4501/plansCompany/6109db9feb28e118af55064a
+
+###
+POST http://localhost:4501/addPlanCompany
+Content-Type: application/json
+
+{
+    "company": "6109db9feb28e118af55064a",
+    "type": "0",
+    "status": true
+}
+
+###
+PUT http://localhost:4501/cancelPlanCompany/610a1a03a29b0890e0320edf
+Content-Type: application/json
+
+{
+    "status": false
+}
+
+
+
