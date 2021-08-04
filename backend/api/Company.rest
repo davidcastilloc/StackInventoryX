@@ -2,7 +2,7 @@
 GET http://localhost:4501/companys
 
 ###
-GET http://localhost:4501/company/60c6b6283503acba2d415e47
+GET http://localhost:4501/company/6109db9feb28e118af55064a
 
 ###
 POST http://localhost:4501/addCompany

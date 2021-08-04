@@ -2,7 +2,7 @@
 GET http://localhost:4501/allTransactions
 
 ###
-GET http://localhost:4501/transactionsByCompany/1
+GET http://localhost:4501/transactionsByCompany/6109db9feb28e118af55064a
 
 ###
 POST http://localhost:4501/addTransactions
@@ -21,5 +21,5 @@ PUT http://localhost:4501/reverseTransactions/610a22463d3047a2f529843d
 Content-Type: application/json
 
 {
-    "onceReverse": false
+    "onceReverse": true
 }

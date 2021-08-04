@@ -15,6 +15,7 @@ const Company = new Schema({
   zip: { type: String, default: "" },
   status: { type: Boolean, default: true },
   responsable: { type: ResponsableCompany },
+  data: {type: Date, default: Date.now}
 });
 
 module.exports = mongoose.model("company", Company);

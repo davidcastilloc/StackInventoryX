@@ -19,7 +19,7 @@ PUT http://localhost:4501/cancelPlanCompany/610a1a03a29b0890e0320edf
 Content-Type: application/json
 
 {
-    "status": false
+    "status": true
 }
 
 

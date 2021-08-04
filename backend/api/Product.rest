@@ -2,6 +2,9 @@
 GET http://localhost:4501/allProducts
 
 ###
+GET http://localhost:4501/oneProduct/610a004b105d384a24fccc2f
+
+###
 GET http://localhost:4501/productByCompany/6109db9feb28e118af55064a
 
 ###
@@ -10,7 +13,7 @@ Content-Type: application/json
 
 {
     "name" : "test 1",
-    "und": "Kg",
+    "und": "L",
     "foto": {
         "url": "url",
         "thumbnail": "thumbnail",
@@ -18,4 +21,28 @@ Content-Type: application/json
         "base64": "base64"
     },
     "company": "6109db9feb28e118af55064a"
+}
+
+###
+PUT http://localhost:4501/editProduct/610a3413390188bf52c96fea
+Content-Type: application/json
+
+{
+    "name" : "test 6**",
+    "und": "Kg",
+    "foto": {
+        "url": "url 1",
+        "thumbnail": "thumbnail 2",
+        "alt": "alt",
+        "base64": "base643"
+    },
+    "company": "6109db9feb28e118af55064a"
+}
+
+###
+DELETE http://localhost:4501/deleteProduct
+Content-Type: application/json
+
+{
+    "_id_": "610a004b105d384a24fccc2f"
 }
