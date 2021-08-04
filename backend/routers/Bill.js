@@ -1,6 +1,17 @@
 const router = require("express").Router();
 const Bill = require("../models/Bill");
-//const ArticleBill = require("../models/ArticleBill");
+
+router.get("/allBills", async(req, res)=>{
+  try {
+    const billsRetrieve = await Bill.find({});
+    res.status(200).json({
+      Bills: billsRetrieve
+    })
+  } catch (error) {
+    console.log(error);
+    res.status(500).send(error);
+  }
+})
 
 router.post("/createBill", async (req, res) => {
   try {

@@ -1,4 +1,10 @@
 ###
+GET http://localhost:4501/allProducts
+
+###
+GET http://localhost:4501/productByCompany/6109db9feb28e118af55064a
+
+###
 POST http://localhost:4501/createProduct
 Content-Type: application/json
 

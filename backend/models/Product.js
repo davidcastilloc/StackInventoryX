@@ -13,7 +13,8 @@ const Product = new Schema({
   status: {type: Boolean, default:false},
   und: {type: String, default:""}, 
   foto: {type: TypeFoto},
-  company: {type: Schema.ObjectId, ref: "company"}
+  company: {type: Schema.ObjectId, ref: "company"},
+  warehouse: {type: Schema.ObjectId, ref: "warehouse"}
 });
 
 module.exports = mongoose.model("product", Product);

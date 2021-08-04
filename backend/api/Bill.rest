@@ -1,9 +1,12 @@
 ###
+GET http://localhost:4501/allBills
+
+###
 POST http://localhost:4501/createBill
 Content-Type: application/json
 
 {
-    "company" : "hash company",
+    "company" : "6109db9feb28e118af55064a",
     "article": [
         { 
             "company": "test",

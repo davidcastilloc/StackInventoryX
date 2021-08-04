@@ -1,0 +1,41 @@
+###
+GET http://localhost:4501/allWarehouse
+
+###
+GET http://localhost:4501/warehouseByCompany/6109db9feb28e118af55064a
+
+###
+POST http://localhost:4501/addWarehouse
+Content-Type: application/json
+
+{
+    "addresse": "NY",
+    "city": "NY",
+    "state": "NY",
+    "company": "6109db9feb28e118af55064a",
+    "status": true
+}
+
+###
+PUT http://localhost:4501/editWarehouse/610a0ea2cff3c16cf79bda7d
+Content-Type: application/json
+
+{
+    "addresse": "Miami",
+    "city": "miami",
+    "state": "FL",
+    "company": "6109db9feb28e118af55064a",
+    "status": true
+}
+
+###
+DELETE http://localhost:4501/deleteWarehouse
+Content-Type: application/json
+
+{
+    "_id_": "610a0ee8cff3c16cf79bda83"
+}
+
+
+
+
