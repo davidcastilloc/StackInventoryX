@@ -15,7 +15,6 @@ Content-Type: application/json
     "company" : "6109db9feb28e118af55064a",
     "article": [
         { 
-            "company": "6109db9feb28e118af55064a",
             "product": "610a004b105d384a24fccc2f",
             "amount": 50,
             "price": 1.78

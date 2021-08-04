@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const ArticleBill = new Schema({
-  company: String,
   product: { type: Schema.ObjectId, ref: "product" },
   amount: Number,
   price: Number
