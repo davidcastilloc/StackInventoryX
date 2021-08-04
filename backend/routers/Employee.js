@@ -53,7 +53,6 @@ router.get("/employeeCompany/:company", async (req, res) => {
   try {
     const companyRetrieve = await Company.findOne({_id: req.params.company});
     const employeeRetrieve = await Employee.find({ company: req.params.company });
-    //const nameCompany = companyRetrieve[0].name;
     res.status(200).json({
       Employee: employeeRetrieve,
     });
@@ -68,11 +67,12 @@ router.get("/employeeCompany/:company", async (req, res) => {
 
 router.post("/addEmployee", async (req, res) => {
   try {
-    const { name, email, company } = req.body;
+    const { name, email, company, role } = req.body;
     const newEmployee = new Employee({
       name,
       email,
       company,
+      role, 
     });
     await newEmployee.save();
     res.status(200).json({
@@ -89,8 +89,8 @@ router.post("/addEmployee", async (req, res) => {
 
 router.put("/editEmployee/:id", async (req, res) => {
   try {
-    const { name, email, company, status } = req.body;
-    const update_ = { name, email, company, status };
+    const { name, email, company, role, status } = req.body;
+    const update_ = { name, email, company, role,  status };
     await Employee.findByIdAndUpdate(req.params.id, update_);
     res.status(200).json({
         status: "ok"
