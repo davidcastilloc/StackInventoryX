@@ -1,0 +1,15 @@
+###
+POST http://localhost:4501/createProduct
+Content-Type: application/json
+
+{
+    "name" : "test 1",
+    "und": "Kg",
+    "foto": {
+        "url": "url",
+        "thumbnail": "thumbnail",
+        "alt": "alt",
+        "base64": "base64"
+    },
+    "company": "6109db9feb28e118af55064a"
+}

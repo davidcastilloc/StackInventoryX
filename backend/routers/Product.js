@@ -10,5 +10,11 @@ router.post("/createProduct", async (req, res) => {
       foto,
       company,
     });
-  } catch (error) {}
+    res.status(200).send(newProduct);
+  } catch (error) {
+      console.log(error);
+      res.status(500).send(error);
+  }
 });
+
+module.exports = router ;

@@ -14,6 +14,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(require("./routers/Company"));
 app.use(require("./routers/Employee"));
 app.use(require("./routers/Bill"));
+app.use(require("./routers/Product"));
 
 //listen
 app.listen(app.get("port"), () => {
