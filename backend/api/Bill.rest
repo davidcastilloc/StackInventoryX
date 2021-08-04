@@ -2,6 +2,12 @@
 GET http://localhost:4501/allBills
 
 ###
+GET http://localhost:4501/oneBill/610a1051cff3c16cf79bda8d
+
+###
+GET http://localhost:4501/billsByCompany/6109db9feb28e118af55064a
+
+###
 POST http://localhost:4501/createBill
 Content-Type: application/json
 
@@ -9,16 +15,19 @@ Content-Type: application/json
     "company" : "6109db9feb28e118af55064a",
     "article": [
         { 
-            "company": "test",
-            "product": "coca cola",
+            "company": "6109db9feb28e118af55064a",
+            "product": "610a004b105d384a24fccc2f",
             "amount": 50,
             "price": 1.78
-        },
-        { 
-            "company": "test 1",
-            "product": "pepsi",
-            "amount": 50,
-            "price": 3.14
         }
     ]
 }
+
+###
+PUT http://localhost:4501/cancelBill/610a137b2950647e9be42efc
+Content-Type: application/json
+
+{
+    "status": true
+}
+

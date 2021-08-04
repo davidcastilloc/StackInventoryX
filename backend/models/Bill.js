@@ -15,7 +15,8 @@ const Bill = new Schema({
   article: {type: [ArticleBill]},
   tax: {type: Number, default: 0},
   total: {type:Number, default: 0},
-  date: {type: Date, default: Date.now}
+  date: {type: Date, default: Date.now},
+  status: {type: Boolean, default: true}
   
 });
 
